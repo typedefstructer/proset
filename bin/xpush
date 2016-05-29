@@ -1,0 +1,16 @@
+#!/bin/bash
+OLDDIR=`pwd`
+PROFILEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+if [ -z $1 ]
+then
+    COMMIT_MESSAGE="changed settings"
+else
+    COMMIT_MESSAGE=$1
+fi
+
+cd $PROFILEDIR
+git add --all :/
+git commit -m $COMMIT_MESSAGE
+git push
+cd $OLDDIR

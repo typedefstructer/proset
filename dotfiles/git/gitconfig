@@ -1,0 +1,8 @@
+[user]
+	name = vivek
+	email = typedefstructer@gmail.com
+
+[push]
+    default = current
+[pull]
+    default = current
