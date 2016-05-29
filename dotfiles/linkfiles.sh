@@ -14,9 +14,7 @@ function linkfile() {
     fi
 }
 
-linkfile emacs/emacs.el ~/.emacs      0
-linkfile git/gitconfig ~/.gitconfig  0
-
-
-
-
+linkfile emacs/emacs.el      ~/.emacs         0
+linkfile git/gitconfig       ~/.gitconfig     0
+linkfile shell/bashrc        ~/.bashrc        0
+linkfile shell/git-prompt.sh ~/.git-prompt.sh 0
