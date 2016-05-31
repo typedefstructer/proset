@@ -101,4 +101,3 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key (kbd "C-x o") 'switch-window)
-(global-aggressive-indent-mode 1)
