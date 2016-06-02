@@ -13,7 +13,7 @@ source ~/.git-prompt.sh
 
 PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PATH=/home/vivek/sandbox/proset/bin:./:$PATH
+PATH=/home/vivek/code/scbuild/bin:/home/vivek/sandbox/proset/bin:./:$PATH
 export PATH
 
 #BASH HISTORY
@@ -109,6 +109,11 @@ alias g='git'
 alias d='docker'
 
 alias sc='cd ~/code/'
+alias sca='cd ~/code/scapi'
+alias scr='cd ~/code/screact'
+alias scw='cd ~/code/scweb'
+alias scb='cd ~/code/scbuild'
+
 alias 87='cd $DIR/..'
 alias aws-add-creds='source $DIR/../revealed/keys/aws_iam_keys/sportscafe/export.sh'
 
