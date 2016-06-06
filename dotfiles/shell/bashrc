@@ -115,9 +115,10 @@ alias scw='cd ~/code/scweb'
 alias scb='cd ~/code/scbuild'
 alias pro='cd ~/sandbox/proset'
 alias dis='cd ~/sandbox/discourse'
+alias lina='cd ~/sandbox/lina'
+
 alias emac='emacs -nw'
 alias runemacs='emacs &'
-
 
 alias 87='cd $DIR/..'
 alias aws-add-creds='source $DIR/../revealed/keys/aws_iam_keys/sportscafe/export.sh'
