@@ -102,3 +102,6 @@
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key (kbd "C-x o") 'switch-window)
 (setq-default indent-tabs-mode nil)
+(defun insert-current-date () (interactive)
+       (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)")))
+(global-set-key [f7] 'insert-current-date)
