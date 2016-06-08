@@ -8,22 +8,20 @@
 (global-hl-line-mode 1)
 
 (custom-set-faces
- '(default ((t (:foreground "#ffffff"  :background "gray9"))))
- '(cursor  ((t (:background "white" ))))
- '(region  ((t (:foreground "black"  :background "white"))))
-
- '(highlight  ((t (:background "black"))))
-
- '(mode-line ((t (:foreground "white"  :background "cadet blue"))))
- '(fringe  ((t (:foreground "black" :background "black"))))
-
-
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:foreground "#ffffff" :background "gray9"))))
+ '(cursor ((t (:background "white"))))
  '(font-lock-function-name-face ((t (:foreground "lemon chiffon"))))
- '(font-lock-variable-name-face ((t (:foreground "lemon chiffon"))))
-
  '(font-lock-keyword-face ((t (:foreground "CadetBlue1" :weight bold :slant italic))))
  '(font-lock-type-face ((t (:foreground "CadetBlue1" :weight bold :slant italic))))
- )
+ '(font-lock-variable-name-face ((t (:foreground "lemon chiffon"))))
+ '(fringe ((t (:foreground "black" :background "black"))))
+ '(highlight ((t (:background "black"))))
+ '(mode-line ((t (:foreground "white" :background "cadet blue"))))
+ '(region ((t (:foreground "black" :background "white")))))
 
 (setq scroll-margin 1
       scroll-conservatively 0
@@ -105,3 +103,26 @@
 (defun insert-current-date () (interactive)
        (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)")))
 (global-set-key [f7] 'insert-current-date)
+
+(add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
+
+;;(flycheck-add-mode 'javascript-eslint 'web-mode)
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+;;(setq-default flycheck-disabled-checkers
+;;              (append flycheck-disabled-checkers
+;;                      '(javascript-jshint)))
+
+(setq-default flycheck-temp-prefix ".flycheck")
+;;(setq-default flycheck-disabled-checkers
+;;              (append flycheck-disabled-checkers
+;;                     '(json-jsonlist)))
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(js2-basic-offset 2))
