@@ -13,10 +13,11 @@ source ~/.git-prompt.sh
 
 PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PATH=/home/vivek/code/scbuild/bin:/home/vivek/sandbox/proset/bin:./:$PATH
+PATH=/home/vivek/android-studio/bin:/home/vivek/code/scbuild/bin:/home/vivek/sandbox/proset/bin:./:$PATH
 export PATH
 
 #BASH HISTORY
+export JAVA_HOME="/home/vivek/jdk1.8.0_91"
 export HISTSIZE=10000
 export HISTFILESIZE=100000
 export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
@@ -70,6 +71,7 @@ alias install='sudo apt-get install'
 alias remove='sudo apt-get remove'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
+alias droid='studio.sh'
 
 #Ls improvements
 alias ls='ls -F --color=auto'
@@ -115,10 +117,12 @@ alias sca='cd ~/code/scapi'
 alias scr='cd ~/code/screact'
 alias scw='cd ~/code/scweb'
 alias scb='cd ~/code/scbuild'
+alias box='cd ~/sandbox'
 alias pro='cd ~/sandbox/proset'
 alias dis='cd ~/sandbox/discourse'
 alias lina='cd ~/sandbox/lina'
-
+alias serve='python -m SimpleHTTPServer'
+alias o='xdg-open'
 alias emac='emacs -nw'
 alias runemacs='emacs &'
 
