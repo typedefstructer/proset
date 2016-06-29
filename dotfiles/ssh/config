@@ -1,0 +1,18 @@
+Host *
+  ServerAliveInterval 30
+  ServerAliveCountMax 60
+  Compression yes
+#  ForwardAgent yes
+
+#SportsCafe AWS ip range
+Host 172.31.*.*
+  ProxyCommand ssh gw.sportscafe.in nc %h %p
+
+Host *.sportscafe.in sportscafe.in !gw.sportscafe.in !blr.sportscafe.in !*.blr.sportscafe.in !10.0.0.*
+  ProxyCommand ssh -p 2222 gw.sportscafe.in nc %h %p
+
+Host gw.sportscafe.in
+  Port 2222
+
+Host github
+  User git
