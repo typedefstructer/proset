@@ -14,7 +14,8 @@ source ~/.git-prompt.sh
 PARENTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PATH=/usr/local/go/bin:/home/vivek/android-studio/bin:/home/vivek/code/scbuild/bin:/home/vivek/sandbox/proset/bin:./:$PATH
-export PATH
+export GRADLE_HOME=/home/vivek/gradle-3.0
+export PATH=${PATH}:$GRADLE_HOME/bin
 
 #BASH HISTORY
 export JAVA_HOME="/home/vivek/jdk1.8.0_91"
