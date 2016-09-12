@@ -14,5 +14,12 @@ Host *.sportscafe.in sportscafe.in !gw.sportscafe.in !blr.sportscafe.in !*.blr.s
 Host gw.sportscafe.in
   Port 2222
 
-Host github
+Host github.com-vivek1e95
+  HostName github.com
   User git
+  IdentityFile ~/vivek1e95/vivek1e95_rsa
+
+Host github.com-vivek
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
