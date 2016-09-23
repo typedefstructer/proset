@@ -131,6 +131,7 @@ alias dps='docker ps -a'
 alias aws-add-creds='source $DIR/../revealed/keys/aws_iam_keys/sportscafe/export.sh'
 alias colemak='setxkbmap us -variant colemak'
 alias qwerty='setxkbmap us; xset -r 66'
+alias dvp='setxkbmap -layout us -variant dvp'
 
 # Autocomplete for 'g' as well
 complete -o default -o nospace -F _git g
